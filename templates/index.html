@@ -1,0 +1,17 @@
+<html>
+{% load static%}
+    <head>
+        <title>Converting Wav file to HTML</title>
+    </head>
+<body>
+    <img src="{% static 'images/BG.png'%}">
+    <h2>Audio Converter Wav to Midi </h2><br><br>
+    <h4>Upload your Wav File here </h4><br><br>
+
+        <form action="{% url 'index' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="wav_file"><br>
+            <input type="submit">
+        </form>
+</body>
+</html>
